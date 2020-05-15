@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="icon" href="img/tj.png" type="image/png"> -->
+
+  <title>Shakespeare Text Generation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="/static/all.min.css" rel="stylesheet">
+  
+  <!-- Custom styles for this template -->
+  <!-- <link href="/home/jaintanmay121/App/static/resume.min.css" rel="stylesheet"/> -->
+  <link href="/static/resume.min.css" rel="stylesheet"/>
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <br>
+    <br>
+    <h2>Enter Parameters:</h2>
+    <br>
+    <br>
+    <br>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="navbar-nav" action="/"  method="post">
+        <li> 
+          <div>
+            <input name='inpstr' type="text" class="form-control input-lg" placeholder="Enter Start String..." />
+          </div>
+        </li>
+
+        <br>
+        <br>
+        
+        <li class="nav-item">
+          <div class="dropdown">
+                <span class='dropbtn'>Text Length</span>
+                <select class="dropdown-content" name="TextLen" id="TextLen">
+                    <option value=500>500</option>
+                    <option value=1000>1000</option>
+                    <option value=1500>1500</option>
+                    <option value=2000>2000</option>
+                </select>
+          </div>
+        </li>
+        
+        <br>
+        <br>
+        
+        <li class="nav-item">
+          <div  class='dropdown'>
+            <span class='dropbtn'>Select Temprature</span>
+            <select class="dropdown-content" name="temprature" id="Temprature">
+                <option value=0.5>0.5</option>
+                <option value=1>1</option>
+                <option value=0.2>0.2</option>
+                <option value=1.5>1.5</option>
+                <option value=2>2</option>
+            </select>
+          </div>
+        </li>
+
+        <li>
+          <br>
+          <button type="submit" id="solve">Generate</button>
+        </li>
+      
+      </form>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+      <div class="w-100">
+        <h1 class="mb-0">Shakespeare Text Generation</h1>
+        
+        <div class="container">
+          <div class="comment">
+              <textarea readonly class="textinput" id="GenText" placeholder="Generated Text Here...">{{genTex}}</textarea>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>  
+    
+</body>
+
+</html>
