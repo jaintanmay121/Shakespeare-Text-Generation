@@ -111,7 +111,8 @@ h1{
 .textinput {
   float: left;
   width: 100%;
-  min-height: 3075px;
+  min-height: 305px;
+  max-height:700px;
   outline: none;
   resize: none;
   border: 1px solid grey;
