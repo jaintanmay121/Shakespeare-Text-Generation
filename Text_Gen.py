@@ -22,7 +22,7 @@ def generate_text(model, start_string="Romeo", num_generate = 1000, temperature=
 
         predictions = predictions / temperature
         predicted_id = tf.random.categorical(predictions,
-                                             num_samples=1)[-1,0].numpy()
+                                             num_samples=1)[-1,0]
 
         input_indices = tf.expand_dims([predicted_id], 0)
 
