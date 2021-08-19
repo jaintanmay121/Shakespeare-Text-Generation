@@ -11,7 +11,7 @@ index2char = np.array(vocab)
 
 
 def generate_text(model, start_string="Romeo:", num_generate = 1000, temperature=1.0):
-    
+    start_string = "Romeo:" if not start_string else start_string
     input_indices = [char2index[s] for s in start_string]
     input_indices = tf.expand_dims(input_indices, 0)
 
